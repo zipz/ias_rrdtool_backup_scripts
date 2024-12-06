@@ -28,7 +28,7 @@ function rrdtool_compress_dump ()
 		dn_i=`dirname "$i"`
 		# echo DNI: $dn_i
 		sub_path=`echo "$dn_i" | sed -r "s|$INPUT_DIR||"`
-		full_dest_dir="$OUTPUT_DIR/$sub_path"
+		full_dest_dir="$OUTPUT_DIR"
 		# echo "full_dest_dir $full_dest_dir"
 		
 		if [[ ! -d "$full_dest_dir" ]]
@@ -57,7 +57,7 @@ function rrdtool_compress_restore ()
 
 		#echo "Subpath: $sub_path"
 		#exit
-		full_dest_dir="$OUTPUT_DIR/$sub_path"
+		full_dest_dir="$OUTPUT_DIR"
 		#echo "full_dest_dir $full_dest_dir"
 		if [[ ! -d "$full_dest_dir" ]]
 		then
